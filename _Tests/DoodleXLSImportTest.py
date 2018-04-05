@@ -1,5 +1,5 @@
 import unittest
-from DoodleXLSImport import get_dict_from_xls
+from DoodleXLSImport import DoodleXLSImport
 
 class DoodleXLSImportTest(unittest.TestCase):
 
@@ -15,7 +15,8 @@ class DoodleXLSImportTest(unittest.TestCase):
     def testDictionaryIsCreatedWhenMentorsAndDateAvailibilityWithoutExcessWhiteSpace(self):
         excelFile = "XLSFiles\\SimpleDoodle.xls"
         datesRowNumber = 5
-        dict_list = get_dict_from_xls(excelFile, datesRowNumber)
+        importer = DoodleXLSImport(excelFile, datesRowNumber)
+        dict_list = importer.get_dict_from_xls()
         self.assertTrue(len(dict_list) == 4)
         self.assertDictEqual(dict_list[0], {'': 'Jim', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': ''})
         self.assertDictEqual(dict_list[1], {'': 'Bill', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': 'OK'})
