@@ -17,7 +17,7 @@ class DoodleXLSImportTest(unittest.TestCase):
         datesRowNumber = 5
         importer = DoodleXLSImport(excelFile, datesRowNumber)
         dict_list = importer.get_dict_from_xls()
-        self.assertTrue(len(dict_list) == 4)
+        self.assertEqual(len(dict_list), 4)
         self.assertDictEqual(dict_list[0], {'Name': 'Jim', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': ''})
         self.assertDictEqual(dict_list[1], {'Name': 'Bill', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': 'OK'})
         self.assertDictEqual(dict_list[2], {'Name': 'Fred', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': 'OK', 'Sat 14': 'OK'})
@@ -28,7 +28,7 @@ class DoodleXLSImportTest(unittest.TestCase):
         datesRowNumber = 7
         importer = DoodleXLSImport(excelFile, datesRowNumber)
         dict_list = importer.get_dict_from_xls()
-        self.assertTrue(len(dict_list) == 5)
+        
         self.assertDictEqual(dict_list[0], {'Name': 'Jim', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': ''})
         self.assertDictEqual(dict_list[1], {'Name': 'Bill', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': '', 'Sat 14': 'OK'})
         self.assertDictEqual(dict_list[2], {'Name': 'Fred', 'Sat 7': 'OK', 'Mon 9': 'OK', 'Thu 12': 'OK', 'Sat 14': 'OK'})
