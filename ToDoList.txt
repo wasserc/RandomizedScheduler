@@ -1,0 +1,17 @@
+|/| Get doodle values
+|/| Get Mentor list
+|/| Get Mentor Weights
+
+| | combine three dictionaries to 1
+
+| | for each date
+| | 	Get Available mentors
+| | 	For each assignment
+| | 		Get weight bias
+| | 		bias available list
+| | 		Get Mentor
+| | 		Remove mentor from available list for date
+| | 		add weight for the assignment
+| | 		build output for the date
+| | 	save new mentor weights
+	
