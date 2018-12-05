@@ -1,5 +1,5 @@
 import unittest
-from CSVToDict import CSVToDict
+from src.CSVToDict import CSVToDict
 
 class CSVToDictTest(unittest.TestCase):
 

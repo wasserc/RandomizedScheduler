@@ -1,9 +1,9 @@
 import unittest
-from DictDataHandler import DictDataHandler
-from DoodleXLSImport import DoodleXLSImport
-from CSVToDict import CSVToDict
+from src.DictDataHandler import DictDataHandler
+from src.DoodleXLSImport import DoodleXLSImport
+from src.CSVToDict import CSVToDict
 
-class DictDataHandlerTest(unittest.TestCase):
+class DictDataHandler_test(unittest.TestCase):
     
     def setUp(self):
         self.availability = DoodleXLSImport("XLSFiles\\SimpleDoodle.xls", 5)
@@ -14,7 +14,7 @@ class DictDataHandlerTest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGetListMentorListReturnsDictionaryListWithAvailabilityAndAbilitiesAndWeights(self):
+    def GetListMentorListReturnsDictionaryListWithAvailabilityAndAbilitiesAndWeights_test(self):
         data_handler = DictDataHandler(self.availability, self.mentor_list, self.assignment_weights)
         
         dict_list = data_handler.get_full_dictionary_list()

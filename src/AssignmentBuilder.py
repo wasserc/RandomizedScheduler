@@ -1,6 +1,9 @@
+# from CSVToDict import CSVToDict
+# from DoodleXLSImport import DoodleXLSImport
+
 from collections import defaultdict
 
-class DictDataHandler(object):
+class AssignmentBuilder(object):
     def __init__(self, availability, mentor_list, assignment_weights):
         self.availability = availability
         self.mentor_list = mentor_list
