@@ -3,12 +3,12 @@ from src.AssignmentBuilder import AssignmentBuilder
 from src.DoodleXLSImport import DoodleXLSImport
 from src.CSVToDict import CSVToDict
 
-class DictDataHandlerTest(unittest.TestCase):
+class AssignmentBuilder_test(unittest.TestCase):
     
     def setUp(self):
-        self.availability = DoodleXLSImport("XLSFiles\\SimpleDoodle.xls", 5)
-        self.mentor_list = CSVToDict("XLSFiles\\SampleMentorsList.csv")
-        self.assignment_weights = CSVToDict("XLSFiles\\SampleMentorWeights.csv")
+        self.availability = DoodleXLSImport("_Tests\\XLSFiles\\SimpleDoodle.xls", 5)
+        self.mentor_list = CSVToDict("_Tests\\XLSFiles\\SampleMentorsList.csv")
+        self.assignment_weights = CSVToDict("_Tests\\XLSFiles\\SampleMentorWeights.csv")
         pass
 
     def tearDown(self):

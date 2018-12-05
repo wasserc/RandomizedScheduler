@@ -16,6 +16,7 @@ class AssignmentBuilder(object):
     def get_full_dictionary_list(self):
         return self.full_dictionary
     
+    #initialize dictionary to the available dict
     def initialize_full_dictionary(self):
         key = 'Name'
         self.full_dictionary = defaultdict(dict)

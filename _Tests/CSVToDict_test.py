@@ -10,7 +10,7 @@ class CSVToDictTest(unittest.TestCase):
         pass
 
     def testDictionaryIsCreatedWhenSampleMentorListIsImported(self):
-        csvFile = "XLSFiles\\SampleMentorsList.csv"
+        csvFile = "_Tests\\XLSFiles\\SampleMentorsList.csv"
         importer = CSVToDict(csvFile)
         dict_list = importer.get_dictionary()
         self.assertEqual(len(dict_list), 7)
@@ -23,7 +23,7 @@ class CSVToDictTest(unittest.TestCase):
         self.assertDictEqual(dict_list[6], {'Name': 'Carol', 'Leadership': 'Y', 'Gender': 'F', 'RouteLead': 'Y'})
  
     def testDictionaryIsCreatedWhenSampleMentorWeightsIsImported(self):
-        csvFile = "XLSFiles\\SampleMentorWeights.csv"
+        csvFile = "_Tests\\XLSFiles\\SampleMentorWeights.csv"
         importer = CSVToDict(csvFile)
         dict_list = importer.get_dictionary()
         self.assertEqual(len(dict_list), 7)

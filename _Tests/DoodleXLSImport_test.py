@@ -3,17 +3,14 @@ from src.DoodleXLSImport import DoodleXLSImport
 
 class DoodleXLSImportTest(unittest.TestCase):
 
-
     def setUp(self):
         pass
-
 
     def tearDown(self):
         pass
 
-
-    def DictionaryIsCreatedWhenMentorsAndDateAvailibilityWithoutExcessWhiteSpace_test(self):
-        excelFile = "XLSFiles\\SimpleDoodle.xls"
+    def testDictionaryIsCreatedWhenMentorsAndDateAvailibilityWithoutExcessWhiteSpace(self):
+        excelFile = "_Tests\\XLSFiles\\SimpleDoodle.xls"
         datesRowNumber = 5
         importer = DoodleXLSImport(excelFile, datesRowNumber)
         dict_list = importer.get_dict_from_xls()
@@ -26,8 +23,8 @@ class DoodleXLSImportTest(unittest.TestCase):
         self.assertDictEqual(dict_list[5], {'Name': 'Sarah', 'Sat 7': 'OK', 'Mon 9': '', 'Thu 12': 'OK', 'Sat 14': ''})
         self.assertDictEqual(dict_list[6], {'Name': 'Carol', 'Sat 7': '', 'Mon 9': 'OK', 'Thu 12': 'OK', 'Sat 14': 'OK'})
 
-    def DictionaryIsCreatedWhenDifferentWhitespaceIsPresent_test(self):
-        excelFile = "XLSFiles\\SimpleDoodle2.xls"
+    def testDictionaryIsCreatedWhenDifferentWhitespaceIsPresent(self):
+        excelFile = "_Tests\\XLSFiles\\SimpleDoodle2.xls"
         datesRowNumber = 7
         importer = DoodleXLSImport(excelFile, datesRowNumber)
         dict_list = importer.get_dict_from_xls()
